@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+.scroll-offset {
+  scroll-margin-top: 5rem; /* Adjust to your fixed navbar height */
+}

@@ -1,59 +1,82 @@
 import React from 'react';
-import HeroImg from '../../assets/Images/hero-image.png';
-import { FiCheck } from 'react-icons/fi';
+import { FaLeaf } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FiArrowRight } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+
+const headingLines = [
+  '21-Day Ultimate Challenge to',
+  'Reverse High Blood Pressure and',
+  'Sugar Naturally'
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.4
+    }
+  }
+};
+
+const lineVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
+    }
+  }
+};
 
 const Section1 = () => {
-  return (
-    <section className="relative overflow-hidden bg-green-50 text-green-900 px-6 md:px-12 py-16 md:py-24">
-      <div className="relative flex flex-col lg:flex-row justify-between gap-12 mx-auto">
-        {/* Text Block */}
-        <div className="max-w-xl z-10">
-          <p className="font-medium text-sm uppercase tracking-wide mb-3 text-green-800 flex items-center gap-2">
-            <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-            The Natural Reversal Blueprint
-          </p>
+return (
+   <section 
+      id="home"
+      className="scroll-offset relative bg-green-50 text-[#2f855a] px-6 md:px-12 py-20 min-h-[85vh] flex items-center justify-center text-center"
+   >
+      <div className="max-w-4xl mx-auto space-y-6">
 
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-            <span className="text-green-800 text-4xl">21-Day</span> <br />Ultimate Challenge
-          </h1>
+      {/* Animated Heading */}
+      <motion.h1
+         className="font-bold text-2xl sm:text-3xl md:text-5xl leading-snug space-y-2"
+         initial="hidden"
+         animate="visible"
+         variants={containerVariants}
+      >
+         {headingLines.map((line, index) => (
+            <motion.span key={index} className="block" variants={lineVariants}>
+            {line}
+            </motion.span>
+         ))}
+      </motion.h1>
 
-          {/* Marked Heading */}
-          <div className="flex items-start gap-3 mb-4">
-            <div className="min-w-5 min-h-5 flex items-center justify-center rounded-full bg-green-700 text-white mt-1">
-              <FiCheck size={16} />
-            </div>
-            <h2 className="text-lg md:text-2xl font-semibold text-green-900">
-              Reverse High Blood Pressure & Sugar Naturally
-            </h2>
-          </div>
-
-          {/* Marked Paragraph */}
-          <div className="flex items-start gap-3 mb-6">
-            <div className="min-w-5 min-h-5 flex items-center justify-center rounded-full bg-green-700 text-white mt-1">
-              <FiCheck size={16} />
-            </div>
-            <p className="text-base md:text-lg text-green-800 leading-relaxed">
-              A guided journey to detox, nourish, and heal using food, herbs, and lifestyle.
-            </p>
-          </div>
-
-          {/* Button */}
-          <button className="relative inline-flex items-center overflow-hidden px-6 py-3 rounded-full font-semibold border bg-green-800 text-white group hover:text-green-800 transition-all duration-300 mb-8">
-            <span className="relative z-10">Join the Challenge</span>
-            <span className="absolute inset-0 bg-white translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
-          </button>
-        </div>
-
-        {/* Hero Image */}
-        <div className="w-full md:w-[50%] relative z-0 items-center mx-auto">
-          <img
-            src={HeroImg}
-            alt="Hero"
-            className="w-full max-w-sm md:max-w-md lg:max-w-lg object-contain bottom-0 right-0 md:static"
-          />
-        </div>
+      {/* Divider with Leaf */}
+      <div className="flex items-center gap-4 w-full max-w-xs mx-auto">
+         <span className="flex-grow border-t border-[#D1A132]"></span>
+            <FaLeaf className="text-[#D1A132] text-2xl" />
+         <span className="flex-grow border-t border-[#D1A132]"></span>
       </div>
-    </section>
+
+      {/* Subtext */}
+      <p className="text-green-800 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+         A guided journey to detox, nourish, and heal using food, herbs, and lifestyle.
+      </p>
+
+      {/* CTA Button */}
+      <Link to="/store-location">
+         <div className="relative group inline-block">
+            <div className="flex items-center gap-2 px-5 py-2 border border-green-950 rounded-full font-sans font-semibold text-base text-green-800 transition-all duration-300 overflow-hidden relative group-hover:text-white">
+               <span className="relative z-10">Join the challenge Now</span>
+            <span className="absolute inset-0 bg-green-600 translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
+            </div>
+         </div>
+      </Link>
+      
+      </div>   
+   </section>
   );
 };
 

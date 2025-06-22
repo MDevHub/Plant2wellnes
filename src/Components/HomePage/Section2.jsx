@@ -27,11 +27,11 @@ const Section2 = () => {
 
   return (
     <section
-      className="relative text-white py-20 px-6 md:px-16 bg-fixed bg-cover bg-center"
+      className="scroll-offset relative text-white py-20 px-6 md:px-16 bg-fixed bg-cover bg-center"
       style={{ backgroundImage: `url(${Section2Img})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/80 backdrop"></div>
 
       {/* Countdown Content */}
       <div className="relative z-10 max-w-2xl mx-auto text-center">

@@ -23,7 +23,7 @@ const CursorFollower = () => {
 
 			{/* Main dot */}
 			<div
-				className="fixed top-0 left-0 w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-green-600 pointer-events-none z-[9999] transition-transform duration-150 ease-out"
+				className="fixed hidden md:block top-0 left-0 w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-green-600 pointer-events-none z-[9999] transition-transform duration-150 ease-out"
 				style={{
 					transform: `translate(${position.x - 6}px, ${position.y - 6}px)`,
 				}}
