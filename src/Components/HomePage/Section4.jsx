@@ -34,9 +34,9 @@ const testimonials = [
 ];
 
 const Section4 = () => {
-  const sliderRef = useRef(null);
+   const sliderRef = useRef(null);
 
-  const settings = {
+   const settings = {
       dots: false,
       arrows: false,
       infinite: true,
@@ -45,7 +45,7 @@ const Section4 = () => {
       slidesToScroll: 1,
       swipe: true,
       draggable: true
-  };
+   };
 
    return (
       <div 
@@ -55,7 +55,7 @@ const Section4 = () => {
          {/* Left Side */}
          <div className="lg:w-1/3">
             <p className='font-serif flex items-center gap-4 font-semibold text-white mb-4 text-xl md:text-3xl'>
-                <div className="text-green-700 text-2xl"><FaLeaf /></div>
+               <div className="text-green-700 text-2xl"><FaLeaf /></div>
                TESTIMONIALS
             </p>
             <p className="text-xl md:text-3xl font-bold text-white">Hear what our customers say</p>
@@ -103,7 +103,7 @@ const Section4 = () => {
             </Slider>
          </div>
       </div>
-  );
+   );
 };
 
 export default Section4;

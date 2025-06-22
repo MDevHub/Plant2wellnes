@@ -35,7 +35,7 @@ const Section3 = () => {
          id="about"
          className="scroll-offset px-2 md:px-6 py-16 md:py-30 bg-green-50 text-green-900"
       >
-         <h1 className='text-2xl sm:text-3xl md:text-5xl text-center mb-6 md:mb-20 font-bold'>About</h1>
+         <h1 className='text-2xl sm:text-3xl md:text-5xl text-center mb-6 md:mb-20 font-bold'>About The Challenge</h1>
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {features.map(({ title, details }, idx) => (
                <div
