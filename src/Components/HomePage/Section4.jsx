@@ -50,15 +50,16 @@ const Section4 = () => {
    return (
       <div 
          id="reviews"
-         className="scroll-offset flex flex-col lg:flex-row items-start justify-between bg-green-950 px-2 md:px-6 py-10 lg:py-20 lg:px-20 gap-10 transition-all duration-500"
+         className="scroll-offset flex flex-col lg:flex-row items-start justify-between bg-green-950 px-2 md:px-6 py-10 lg:py-20 lg:px- gap-10 transition-all duration-500"
       >
          {/* Left Side */}
          <div className="lg:w-1/3">
-            <p className='font-serif flex items-center gap-4 font-semibold text-white mb-4 text-xl md:text-3xl'>
-               <div className="text-green-700 text-2xl"><FaLeaf /></div>
+            <p className='font-serif flex items-center gap-4 font-semibold text-white mb-6 text-xl md:text-3xl'>
+               {/* <div className="text-green-700 text-2xl"><FaLeaf /></div>  */}
                TESTIMONIALS
+               <div className="text-green-700 text-2xl"><FaLeaf /></div>
             </p>
-            <p className="text-xl md:text-3xl font-bold text-white">Hear what our customers say</p>
+            <p className="text-xl md:text-3xl font-bold text-white">Reviews of our customers</p>
             <p className='mt-8 text-white italic'> 4.5 Based On 500+ Review</p>
             <div className="flex space-x-1">
                {[...Array(5)].map((_, i) => (
@@ -93,7 +94,7 @@ const Section4 = () => {
                         ))}
                      </div>
                      <p className="italic text-white mb-4">"{item.text}"</p>
-                     <hr className="border-t border-green-50 mb-4" />
+                     <hr className="border-t outline-none border-green-50 mb-4" />
                      <div className="flex items-center space-x-4">
                         <img src={item.img} alt={item.name} className="w-14 h-14 rounded-full object-cover" />
                         <p className="font-semibold text-white">{item.name}</p>
