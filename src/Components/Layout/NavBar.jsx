@@ -17,7 +17,7 @@ const toggleMenu = () => setMenuOpen(!menuOpen);
 
 	return (
 		<>
-			<nav className="fixed top-0 left-0 w-full bg-[#14532d] text-white px-6 md:px-12 py-3 flex justify-between items-center shadow-md z-50">
+			<nav className="fixed top-0 left-0 w-full bg-[#295f3f] text-white px-6 md:px-12 py-3 flex justify-between lg:justify-around items-center shadow-md z-50">
 				
 				{/* Logo */}
 				<div>
@@ -25,8 +25,8 @@ const toggleMenu = () => setMenuOpen(!menuOpen);
 				</div>
 
 				{/* Desktop Menu */}
-				<div className="hidden md:flex gap-10 items-center">
-					<div className="flex gap-8 text-base font-sans font-medium">
+				{/* <div className="hidden md:flex gap-10 items-center"> */}
+					<div className="hidden md:flex gap-12 text-base font-sans ">
 						{navLinks.map(({ path, label }) => (
 							<a
 								key={path}
@@ -40,18 +40,36 @@ const toggleMenu = () => setMenuOpen(!menuOpen);
 					</div>
 
 					{/* Store Location Button */}
-					<a href="#store-location">
-						<div className="relative group">
-							<div className="flex items-center gap-2 px-5 py-2 border border-white rounded-full font-sans font-semibold text-base text-white transition-all duration-300 overflow-hidden relative group-hover:text-[#14532d]">
-								<span className="relative z-10">Store Location</span>
-								<span className="relative z-10 bg-white text-[#14532d] rounded-full p-1">
-									<FiArrowRight size={16} />
-								</span>
-								<span className="absolute inset-0 bg-white translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0 rounded-full"></span>
+					<a href="#store-location" className='hidden lg:block'>
+						<div className="relative group overflow-hidden rounded-full border border-white">
+							{/* Button Content */}
+							<div className="flex items-center gap-2 px-12 py-2 font-sans text-base text-white transition-all duration-300  relative z-10">
+								<span className="relative z-10">Register</span>
 							</div>
+
+							{/* White shimmer overlay */}
+							<div className="absolute top-0 left-[-150%] w-[200%] h-full bg-white/15 blur-md transform -skew-x-12 animate-shimmer z-0" />
 						</div>
+
+						{/* Inline animation styles */}
+						<style>
+							{`
+								@keyframes shimmer {
+								0% {
+									transform: translateX(-100%) skewX(-12deg);
+								}
+								100% {
+									transform: translateX(100%) skewX(-12deg);
+								}
+								}
+
+								.animate-shimmer {
+								animation: shimmer 2.5s linear infinite;
+								}
+							`}
+						</style>
 					</a>
-				</div>
+				{/* </div> */}
 
 				{/* Hamburger */}
 				<div className="md:hidden">
