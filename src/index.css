@@ -7,6 +7,9 @@ html {
   scroll-margin-top: 5rem; /* Adjust to your fixed navbar height */
 }
 html, body {
+  margin: 0;
+  padding: 0;
 	overflow-x: hidden;
+  /* background-color: #dcfce7; */
 }
 

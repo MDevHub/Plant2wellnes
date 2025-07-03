@@ -17,7 +17,7 @@ const toggleMenu = () => setMenuOpen(!menuOpen);
 
 	return (
 		<>
-			<nav className="fixed top-0 left-0 w-full bg-[#295f3f] text-white px-6 md:px-12 py-3 flex justify-between lg:justify-around items-center shadow-md z-50">
+			<nav className="mb-0 fixed top-0 left-0 w-full bg-[#3e7752] text-green-100 font-normal py-4 flex justify-between px-5 md:px-10 lg-30 xl:px-40 items-center z-50">
 				
 				{/* Logo */}
 				<div>
@@ -26,13 +26,13 @@ const toggleMenu = () => setMenuOpen(!menuOpen);
 
 				{/* Desktop Menu */}
 				{/* <div className="hidden md:flex gap-10 items-center"> */}
-					<div className="hidden md:flex gap-12 text-base font-sans ">
+					<div className="hidden md:flex gap-14 text-base font-sans ">
 						{navLinks.map(({ path, label }) => (
 							<a
 								key={path}
 								href={path}
 								onClick={() => setMenuOpen(false)}
-								className="transition-colors duration-300 hover:text-[#d1a132]"
+								className="transition-colors duration-300 hover:text-green-600"
 							>
 								{label}
 							</a>
@@ -41,14 +41,11 @@ const toggleMenu = () => setMenuOpen(!menuOpen);
 
 					{/* Store Location Button */}
 					<a href="#store-location" className='hidden lg:block'>
-						<div className="relative group overflow-hidden rounded-full border border-white">
+						<div className="relative group overflow-hidden rounded-full border border-green-100">
 							{/* Button Content */}
-							<div className="flex items-center gap-2 px-12 py-2 font-sans text-base text-white transition-all duration-300  relative z-10">
+							<div className="flex items-center gap-2 px-12 py-2 font-sans text-base text-green-100 hover:text-[#3e7752] hover:bg-white transition-all duration-300  relative z-10">
 								<span className="relative z-10">Register</span>
 							</div>
-
-							{/* White shimmer overlay */}
-							<div className="absolute top-0 left-[-150%] w-[200%] h-full bg-white/15 blur-md transform -skew-x-12 animate-shimmer z-0" />
 						</div>
 
 						{/* Inline animation styles */}
