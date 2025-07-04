@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import NavBar from './Components/Layout/NavBar'
 import Footer from './Components/Layout/Footer'
 // import CursorFollower from './Components/Layout/CursorFollower'
-import Home from './Components/Home'
+import MainPage from './Components/MainPage'
 // import WhatsAppButton from './Components/Layout/WhatsAppButton '
 
 
@@ -16,7 +16,7 @@ export default function App() {
 				{/* <WhatsAppButton /> */}
 				<main style={{ flexGrow: 1 }}>
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route path="/" element={<MainPage />} />
 					</Routes>
 				</main>
 				<Footer />

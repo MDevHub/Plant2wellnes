@@ -17,7 +17,7 @@ const toggleMenu = () => setMenuOpen(!menuOpen);
 
 	return (
 		<>
-			<nav className="mb-0 fixed top-0 left-0 w-full bg-[#3e7752] text-green-100 font-normal py-4 flex justify-between px-5 md:px-10 lg-30 xl:px-40 items-center z-50">
+			<nav className="mb-0 fixed top-0 left-0 w-full bg-green-100 text-black font-normal py-4 flex justify-between px-5 md:px-10 xl:px-40 items-center z-50">
 				
 				{/* Logo */}
 				<div>
@@ -41,9 +41,9 @@ const toggleMenu = () => setMenuOpen(!menuOpen);
 
 					{/* Store Location Button */}
 					<a href="#store-location" className='hidden lg:block'>
-						<div className="relative group overflow-hidden rounded-full border border-green-100">
+						<div className="relative group overflow-hidden rounded-full border border-black">
 							{/* Button Content */}
-							<div className="flex items-center gap-2 px-12 py-2 font-sans text-base text-green-100 hover:text-[#3e7752] hover:bg-white transition-all duration-300  relative z-10">
+							<div className="flex items-center gap-2 px-12 py-2 font-sans text-base text-black hover:text-white hover:bg-green-800 transition-all duration-300  relative z-10">
 								<span className="relative z-10">Register</span>
 							</div>
 						</div>
@@ -68,37 +68,11 @@ const toggleMenu = () => setMenuOpen(!menuOpen);
 					</a>
 				{/* </div> */}
 
-				{/* Hamburger */}
-				<div className="md:hidden">
-					<button
-						onClick={toggleMenu}
-						className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-[#14532d] shadow-md hover:bg-green-100 transition-all duration-300 "
-					>
-						{menuOpen ? <FiX size={22} /> : <HiOutlineMenuAlt3 size={24}/>}
-					</button>
-				</div>
-
-				{/* Mobile Menu */}
-				<div
-					className={`md:hidden fixed top-16 left-0 w-full bg-[#14532d] text-white px-6 py-4 space-y-4 transition-all duration-500 ease-in-out z-40 ${
-						menuOpen
-						? 'opacity-100 scale-y-100 translate-y-0'
-						: 'opacity-0 scale-y-95 -translate-y-4 pointer-events-none'
-					}`}
-				>
-					{navLinks.map(({ path, label }, index) => (
-						<a
-							key={path}
-							href={path}
-							onClick={() => setMenuOpen(false)}
-							className={`flex items-center gap-3 text-white font-medium text-base transform transition-all duration-700 ease-out hover:text-[#d1a132]
-							translate-x-[-20px] opacity-0
-							${menuOpen ? `translate-x-0 opacity-100 delay-${index * 75}` : ''}`}
-						>
-							<FiArrowRight className="text-[#d1a132]" />
-							{label}
-						</a>
-					))}
+				<div className="md:hidden relative group overflow-hidden rounded-full border border-black">
+					{/* Button Content */}
+					<div className="flex items-center gap-2 px-12 py-2 font-sans text-base text-black hover:text-white hover:bg-green-800 transition-all duration-300  relative z-10">
+						<span className="relative z-10">Register</span>
+					</div>
 				</div>
 			</nav>
 

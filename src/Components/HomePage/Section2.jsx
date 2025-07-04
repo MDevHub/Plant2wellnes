@@ -35,7 +35,7 @@
 	const toggle = (i) => setOpenIdx((prev) => (prev === i ? null : i));
 
 	return (
-		<div className="-mt-20 bg-transparent px-5 md:px-10 xl:px-40 relative z-10">
+		<div className="-mt-20 bg-transparent px-3 md:px-10 xl:px-40 relative z-10">
 			<div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
 			{cards.map((card, i) => {
 				const isOpen = openIdx === i;
@@ -46,7 +46,7 @@
 							onClick={() => toggle(i)}
 						>
 						<div
-							className={` transition-transform duration-700 transform-style-preserve-3d ${
+							className={`relative transition-transform duration-700 transform-style-preserve-3d ${
 								isOpen ? 'rotate-y-180' : ''
 							}`}
 						>

@@ -20,7 +20,7 @@
 
 	const Section1 = () => {
 		return (
-			<div className="relative mt-0 bg-green-100 py-16 px-5 md:px-10 xl:px-40 rounded-b-[80px] md:rounded-none pb-40">
+			<div className="relative mt-0 bg-green-50 py-16 px-3 md:px-10 xl:px-40 rounded-b-[80px] md:rounded-none pb-40">
 			<motion.div
 				className="max-w-3xl mx-auto text-center space-y-5"
 				initial="hidden"
@@ -29,7 +29,7 @@
 				variants={container}
 			>
 			<motion.h1
-				className="text-green-700 leading-snug font-semibold text-[18px] sm:text-2xl md:text-3xl"
+				className="text-black leading-snug font-semibold text-[18px] sm:text-2xl md:text-3xl"
 				variants={container}
 				>
 				{
@@ -56,21 +56,21 @@
 				}
 				</motion.h1>
 				<motion.p
-					className="text-xl text-green-700 font-semibold font-serif italic text-[16px]"
+					className="text-xl text-black font-semibold font-serif italic text-[16px]"
 					variants={fadeUp}
 				>
 					They Told You You'll Be on Drugs for Life... That Ends Now.
 				</motion.p>
 
 				<motion.p
-					className="text-[16px] font-medium text-green-700"
+					className="text-[16px] font-medium text-black"
 					variants={fadeUp}
 				>
 					For years, you've been managing your blood pressure or sugar levels with medications. You've been told there's no way out. That your condition is "chronic" and lifelong.
 				</motion.p>
 
 				<motion.p
-					className="text-[16px] font-medium text-green-700"
+					className="text-[16px] font-medium text-black"
 					variants={fadeUp}
 				>
 					But what if that isn't true?<br />
@@ -79,7 +79,7 @@
 
 				<motion.div variants={fadeUp}>
 					<Link to="#Register">
-					<button className="mt-2 bg-[#3e7752] text-white px-20 py-2 rounded-full hover:bg-[#28613c] transition-all duration-300">
+					<button className="mt-2 bg-[#3e7752] text-white font-semibold px-20 py-3 cursor-pointer rounded-full hover:bg-[#28613c] transition-all duration-300">
 						Register Now
 					</button>
 					</Link>
