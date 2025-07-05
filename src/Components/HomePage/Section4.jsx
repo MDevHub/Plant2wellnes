@@ -65,16 +65,16 @@ import handImg from '../../assets/Images/hand.png'
          `}
          </style>
 
-         <h1 className="text-center text-2xl md:text-3xl font-bold text-[#000000c9] mb-7">
-         What’s Included?
+         <h1 className="text-center text-2xl md:text-3xl font-bold text-[#000000c9] mb-15">
+            What’s Included?
          </h1>
 
-         <div className="flex flex-col gap-6">
+         <div className="flex flex-col gap-14 sm:gap-6">
          {items.map((item, index) => (
-            <div key={index} className="bg-white rounded-xl p-4 shadow flex flex-col md:flex-row justify-center gap-4 md:gap-6">
+            <div key={index} className="bg-white rounded-xl p-4 shadow flex flex-col md:flex-row justify-center gap-0 sm:gap-4 md:gap-6">
                {/* Image Circle */}
                {/* Egg-shaped image container */}
-               <div className="relative min-w-[130px] h-[130px] bg-[#d6f2df] flex items-center justify-center m-auto egg-shape overflow-hidden shadow-md">
+               <div className="relative top-[-50px] sm:top-0 min-w-[160px] h-[140px] sm:min-w-[130px] sm:h-[130px] bg-[#d6f2df] flex items-center justify-center m-auto egg-shape overflow-hidden shadow-md">
                   <img
                      src={item.img}
                      alt={item.title}

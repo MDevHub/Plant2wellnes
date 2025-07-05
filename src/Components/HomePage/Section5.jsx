@@ -1,77 +1,105 @@
-import React, { useEffect } from 'react';
-import { FaCheckCircle } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import bonusIMG from '../../assets/Images/bonusImg.jpg';
+import React from 'react'
+import balanceImg from '../../assets/Images/balance.png'
+import contImg from '../../assets/Images/cont.png'
+import energyImg from '../../assets/Images/energy.png'
+import habitsImg from '../../assets/Images/habits.jpeg'
+import immuneImg from '../../assets/Images/immune.jpg'
+import lightImg from '../../assets/Images/light.webp'
+import liverImg from '../../assets/Images/liver.jpg'
+import ToxicImg from '../../assets/Images/HeroImg2.jpg'
+import freeImg from '../../assets/Images/free.webp'
 
-const bonuses = [
-	"Free Guide: 7 Things to Do Before the Challenge",
-	"Up to ₦50,000 worth of free herbal products for 5 participants",
-	"30% off herbal kits for all participants"
-];
 
-const Section5 = () => {
-	useEffect(() => {
-		AOS.init({
-			duration: 1000,
-			once: true,
-			easing: 'ease-out-cubic',
-			offset: 150, // Animation triggers 150px before the element fully enters
-		});
-	}, []);
+	const benefitsWeek1 = [
+		{ img: ToxicImg, text: 'Flush out toxins and old waste' },
+		{ img: liverImg, text: 'Support your liver, kidneys, and gut' },
+		{ img: lightImg, text: 'Feel lighter, clearer, and more in control' },
+	];
+	const benefitsWeek2 = [
+		{ img: balanceImg, text: 'Balance your sugar and pressure naturally' },
+		{ img: contImg, text: 'Reduce inflammation using real food and herbs' },
+		{ img: energyImg, text: 'Restore energy, mood, and metabolism' },
+	];
+	const benefitsWeek3 = [
+		{ img: habitsImg, text: 'Lock in your new habits' },
+		{ img: immuneImg, text: 'Boost immunity and long-term wellness' },
+		{ img: freeImg, text: 'Start living free, healthy, and empowered' },
+	];
 
+	const Section5 = () => {
 	return (
-		<div
-			id="training"
-			className="scroll-offset w-full flex flex-col md:flex-row"
-		>
-			{/* Left Side - Image with hover scale */}
-			<div
-				className="md:w-1/2 w-full relative overflow-hidden"
-				data-aos="fade-right"
-				data-aos-offset="200"
-			>
-				<div className="group w-full h-full rounded-2xl">
-					<img
-						src={bonusIMG}
-						alt="Bonus"
-						className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-					/>
-					<div className="absolute inset-0 bg-gradient-to-t from-green-900/30 to-transparent pointer-events-none"></div>
-				</div>
-			</div>
+		<div className="bg-transparent rounded-xl p-4 shadow py-10">
+			<div className="space-y-3">
+				<h1 className="text-xl sm:text-2xl md:text-3xl text-[#000000c9] font-bold text-center">
+					Benefits You Will Gain
+				</h1>
+				<p className="text-xs sm:text-lg text-center text-[#000000c9]">by taking this challenge</p>
+				
+				{/* Week One Benefits */}
+				<p className="text-sm sm:text-lg font-bold text-[#3e7752] text-center mt-10">WEEK (1) DETOX & CLEANSE</p>
 
-			{/* Right Side - Bonuses */}
-			<div
-				className="md:w-1/2 w-full bg-green-50 py-12 px-4 sm:px-6 md:px-10 flex items-center"
-				data-aos="fade-left"
-				data-aos-offset="200"
-			>
-				<div className="w-full max-w-xl mx-auto space-y-8">
-					<h2
-						className="text-xl sm:text-2xl md:text-3xl font-bold text-green-900"
-						data-aos="fade-up"
-						data-aos-delay="200"
-					>
-						Bonus Offers You Would Get
-					</h2>
-					<ul className="space-y-6 ">
-						{bonuses.map((item, index) => (
-							<li
-								key={index}
-								className="flex items-start gap-3 bg-white shadow p-4 rounded-md"
-								data-aos="fade-up"
-								data-aos-delay={300 + index * 150}
-								data-aos-offset="200"
-							>
-								<p className="text-green-900 font-medium md:text-lg">{item}</p>
-							</li>
-						))}
-					</ul>
+				<div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+					{benefitsWeek1.map((item, index) => (
+						<div key={index} className="text-center space-y-2 items-centern justify ">
+							<div className="relative w-[130px] h-[160px] mx-auto overflow-hidden hover:scale-110 transition-transform duration-700">
+								<img
+									src={item.img}
+									alt={`benefit-${index}`}
+									className="w-full h-full object-cover transition-transform duration-300  egg-mask"
+								/>
+							</div>
+							<p className="text-sm text-[#000000da] mt-4 mx-auto text-center md:max-w-[80%]">
+							{item.text}
+							</p>
+						</div>
+					))}
+				</div>
+
+				{/* Week Two Benefits */}
+				<p className="text-sm sm:text-lg font-bold text-[#3e7752] text-center mt-10">WEEK (2) RESET & BALANCE</p>
+
+				<div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+					{benefitsWeek2.map((item, index) => (
+						<div key={index} className="text-center space-y-2 items-centern justify ">
+							<div className="relative w-[130px] h-[160px] mx-auto overflow-hidden hover:scale-110 transition-transform duration-700">
+								<img
+									src={item.img}
+									alt={`benefit-${index}`}
+									className="w-full h-full object-cover transition-transform duration-300  egg-mask"
+								/>
+							</div>
+							<p className="text-sm text-[#000000da] mt-4 mx-auto text-center md:max-w-[80%]">
+							{item.text}
+							</p>
+						</div>
+					))}
+				</div>
+
+				{/* Week Three Benefits */}
+				<p className="text-sm sm:text-lg font-bold text-[#3e7752] text-center mt-10">WEEK (3) REBUILD & SUSTAIN</p>
+
+				<div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+					{benefitsWeek3.map((item, index) => (
+						<div key={index} className="text-center space-y-2 items-centern justify ">
+							<div className="relative w-[130px] h-[160px] mx-auto overflow-hidden hover:scale-110 transition-transform duration-700">
+								<img
+									src={item.img}
+									alt={`benefit-${index}`}
+									className="w-full h-full object-conver transition-transform duration-300  egg-mask"
+								/>
+							</div>
+							<p className="text-sm text-[#000000da] mt-4 mx-auto text-center md:max-w-[80%]">
+							{item.text}
+							</p>
+						</div>
+					))}
 				</div>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default Section5;
+export default Section5
+
+
+					

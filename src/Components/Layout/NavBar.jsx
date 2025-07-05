@@ -17,7 +17,7 @@ const toggleMenu = () => setMenuOpen(!menuOpen);
 
 	return (
 		<>
-			<nav className="mb-0 fixed top-0 left-0 w-full bg-green-100 text-black font-normal py-4 flex justify-between px-5 md:px-10 xl:px-40 items-center z-50">
+			<nav className="mb-0 fixed top-0 left-0 w-full bg-green-50 text-black font-normal py-4 flex justify-between px-5 md:px-10 xl:px-40 items-center z-50">
 				
 				{/* Logo */}
 				<div>
