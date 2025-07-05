@@ -11,6 +11,8 @@ FaMoneyBillWave,
 FaCheckCircle,
 } from 'react-icons/fa';
 import Section5 from './HomePage/Section5';
+import Section6 from './HomePage/Section6';
+import Section7 from './HomePage/Section7';
 
    const NAVBAR_HEIGHT = 112; // 7rem
 
@@ -56,6 +58,12 @@ import Section5 from './HomePage/Section5';
                </section>
                <section className="">
                   <Section5 />
+               </section>
+               <section className="">
+                  <Section6 />
+               </section>
+               <section className="">
+                  <Section7 />
                </section>
             </div>
 
