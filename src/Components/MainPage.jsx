@@ -13,6 +13,7 @@ FaCheckCircle,
 import Section5 from './HomePage/Section5';
 import Section6 from './HomePage/Section6';
 import Section7 from './HomePage/Section7';
+import Section8 from './HomePage/Section8';
 
    const NAVBAR_HEIGHT = 112; // 7rem
 
@@ -50,20 +51,23 @@ import Section7 from './HomePage/Section7';
          <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-6 px-3 md:px-10 xl:px-40 pt-20">
             {/* Left content */}
             <div className="space-y-10 lg:col-span-2">
-               <section ref={section3Ref} className="">
+               <section ref={section3Ref} >
                   <Section3 />
                </section>
-               <section className="">
+               <section>
                   <Section4 />
                </section>
-               <section className="">
+               <section>
                   <Section5 />
                </section>
-               <section className="">
+               <section >
                   <Section6 />
                </section>
-               <section className="">
+               <section >
                   <Section7 />
+               </section>
+               <section>
+                  <Section8 />
                </section>
             </div>
 

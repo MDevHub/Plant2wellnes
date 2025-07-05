@@ -1,87 +1,83 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+   import React from 'react'
+   import review1 from '../../assets/Images/testimonial1.jpg'
+   import review2 from '../../assets/Images/testimonial2.jpg'
+   import review3 from '../../assets/Images/testimonial3.jpg'
+   import man1 from '../../assets/Images/author-1.jpg'
+   import man2 from '../../assets/Images/author-2.jpg'
+   import man3 from '../../assets/Images/author-4.jpg'
+   import { FaStar } from 'react-icons/fa'
 
-const faqs = [
-   {
-      question: "Who is this challenge for?",
-      answer:
-         "This challenge is for you if you have high blood sugar, pre diabetes, diabetes, high blood pressure, high cholesterol or you are predisposed to anyone of the health conditions mentioned above, and you simply want to prevent these before the onset.",
-   },
-   {
-      question: "Who shouldn't join this challenge?",
-      answer:
-         "Don’t bother to join if you’re not ready to be free from these health conditions or you are okay with just managing your health with continues use of drugs.",
-   },
-   {
-      question: "What if I don't have access to recommended herbs?",
-      answer:
-         "All the herbs, spices, vegetables and fruits we are recommending can be sourced locally around you, if you’re not in Nigeria we will give you substitutes. You can also get your herbs supplies from our farm at a special discount.",
-   },
-   {
-      question: "What support is available during the challenge?",
-      answer:
-         "You will have access to dedicated WhatsApp group for support where you can get a direct communication with me.",
-   },
-];
+   const Section7 = () => {
+   return (
+      <div className="bg-white rounded-xl p-5">
+         {/* Title */}
+         <div className="py-10 space-y-3">
+            <h1 className="text-2xl md:text-3xl text-[#3e7752] font-semibold text-center">
+               Review from People
+            </h1>
+            <p className="text-sm sm:text-[14px] text-[#000000c9] text-center font-semibold">
+               1,000+ people have already completed the 21 Day Ultimate Health Challenge
+            </p>
+         </div>
 
-const Section7 = () => {
-   const [openIndex, setOpenIndex] = useState(null);
-   const contentRefs = useRef([]);
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Highlighted Review */}
+            <div className="bg-[#f5faf7] p-3 rounded-xl flex flex-col items-center text-center space-y-4 shadow">
+               <p className="bg-white shimmer-text px-3 py-1 rounded-full inline-block">
+                  Highlighted Review
+               </p>
+               <img src={man1} alt="highlighted" className="w-24 h-24 object-cover rounded-full border" />
+               <p className="text-[#000000c9] font-semibold">Boluwatife 32, Lagos</p>
+               <div className="flex justify-center text-yellow-400 text-lg">
+                  {[...Array(4)].map((_, i) => (
+                  <FaStar key={i} />
+                  ))}
+               </div>
+               <p className="text-sm text-[#000000da] leading-relaxed">
+                  I was on medication for over 23 years... I had series of symptoms and my doctor said I just have to endure it, I thought it was my fate. But after joining Ajoke's program, I stopped my medications within one month. And my numbers? Perfect. I now sleep better and wake up energized. I wish I knew all these earlier.
+               </p>
+            </div>
 
-   const toggle = (index) => {
-         setOpenIndex(openIndex === index ? null : index);
-   };
-
-return (
-   <div
-      id="faqs"
-      className="scroll-offset w-full bg-green-50 py-12 px-4 md:px-10 lg:px-20">
-      <h2 className="text-2xl md:text-3xl font-bold text-green-900 text-center mb-10">
-         Frequently Asked Questions
-      </h2>
-
-            <div className="max-w-4xl mx-auto space-y-4">
-               {faqs.map((faq, index) => {
-                  const isOpen = openIndex === index;
-
-               return (
-                  <div
-                     key={index}
-                     className="bg-white rounded-md shadow-md border border-green-100 transition-all duration-300"
-                  >
-                     {/* Header */}
-                     <button
-                        onClick={() => toggle(index)}
-                        className="w-full flex items-center justify-between py-5 px-2 text-left text-green-800 font-medium text-lg hover:bg-green-100 transition-colors duration-300"
-                     >
-                        <span>{faq.question}</span>
-                        {isOpen ? (
-                           <FaChevronUp className="text-green-700 transition-transform duration-300" />
-                        ) : (
-                           <FaChevronDown className="text-green-700 transition-transform duration-300" />
-                        )}
-                     </button>
-
-                     {/* Animated Answer Section */}
-                     <div
-                        ref={(el) => (contentRefs.current[index] = el)}
-                        style={{
-                        maxHeight: isOpen
-                           ? `${contentRefs.current[index]?.scrollHeight}px`
-                           : '0px',
-                        }}
-                        className="overflow-hidden transition-all duration-500 ease-in-out px-5 text-green-900 text-[16px]"
-                     >
-                        <div className={`py-4 ${isOpen ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
-                           {faq.answer}
+               {/* Other Reviews */}
+               <div className="lg:col-span-2 flex flex-col gap-6">
+                  {[{ img: man2, name: 'Muinat Adeyemi', age: '22, Ogun State', reviewImg: review1 },
+                     { img: man1, name: 'Aisha Bello', age: '29, Abuja', reviewImg: review2 },
+                     { img: man3, name: 'John Okafor', age: '35, Enugu', reviewImg: review3 }
+                  ].map((item, i) => (
+                  <div key={i} className="bg-[#fdfdfd] p-4 rounded-xl shadow-md space-y-3">
+                     {/* Top Section */}
+                     <div className="flex items-center gap-4">
+                        <div className="min-w-[60px] min-h-[60px] rounded-full overflow-hidden bg-[#d6f2df] flex items-center justify-center">
+                           <img
+                           src={item.img}
+                           alt="user"
+                           className="w-[60px] h-[60px] object-cover rounded-full hover:scale-105 transition-transform duration-300"
+                           />
                         </div>
+                     <div>
+                     <div className="flex text-yellow-400 text-sm">
+                        {[...Array(4)].map((_, j) => (
+                           <FaStar key={j} />
+                        ))}
                      </div>
+                     <p className="text-[#3e7752] font-bold">{item.name}</p>
+                     <p className="text-[#000000c9] text-sm">{item.age}</p>
                   </div>
-               );
-            })}
+               </div>
+               {/* Review Image */}
+               <div className="overflow-hidden rounded-lg max-w-full">
+                  <img
+                     src={item.reviewImg}
+                     alt="review"
+                     className="rounded-lg w-full max-h-[300px] object-cover hover:scale-105 transition-transform duration-300"
+                  />
+               </div>
+               </div>
+            ))}
+         </div>
          </div>
       </div>
-   );
-};
+   )
+   }
 
-export default Section7;
+   export default Section7
