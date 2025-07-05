@@ -1,110 +1,102 @@
-import React, { useRef } from 'react';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { FaLeaf } from 'react-icons/fa';
+import React from 'react'
+import hpImg from '../../assets/Images/hp.webp'
+import dcImg from '../../assets/Images/dc.avif'
+import comImg from '../../assets/Images/comImg.png'
+import handImg from '../../assets/Images/hand.png'
 
-
-import author1 from '../../assets/Images/author-1.jpg';
-import author2 from '../../assets/Images/author-2.jpg';
-import author3 from '../../assets/Images/author-3.jpg';
-import author4 from '../../assets/Images/author-4.jpg';
-
-const testimonials = [
-   {
-      img: author1,
-      name: 'Aishat Mustapha',
-      text: "This service completely exceeded my expectations. The team was professional, responsive, and the results were outstanding!"
-   },
-   {
-      img: author2,
-      name: 'Kanu Ali',
-      text: "An amazing experience from start to finish. The attention to detail and customer support was exceptional. I'm incredibly pleased with the outcome!"
-   },
-   {
-      img: author3,
-      name: 'Alice Williams',
-      text: "Absolutely fantastic service! They went above and beyond to make sure everything was perfect. The final product was better than I could have imagined."
-   },
-   {
-      img: author4,
-      name: 'David Brown',
-      text: "I am so pleased with the quick turnaround and excellent communication. The team really cares about customer satisfaction. Highly recommended!"
-   }
-];
-
-const Section4 = () => {
-   const sliderRef = useRef(null);
-
-   const settings = {
-      dots: false,
-      arrows: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      swipe: true,
-      draggable: true
-   };
+   const Section4 = () => {
+   const items = [
+      {
+         img: hpImg,
+         title: 'What Happens After You Pay',
+         points: [
+         'You’ll be added to our private WhatsApp group immediately',
+         'You’ll receive your onboarding guide, food list, and herb preparation',
+         'Build a connection with people from different countries on the same journey',
+         ],
+      },
+      {
+         img: dcImg,
+         title: 'Recorded Session Every Morning',
+         points: [
+         'Every session will be a fresh, inspiring, power-packed experience including deep knowledge, experiential activities, engaging stories, and practical tips',
+         ],
+      },
+      {
+         img: comImg,
+         title: 'Community of Thousands of People',
+         points: [
+         'You will have a beautiful community of like-minded people from all across the world taking the challenge with you, to keep you motivated.',
+         ],
+      },
+      {
+         img: handImg,
+         title: 'Handwritten Notes and Q&A’s For Every Session',
+         points: [
+         'During the 21 day, you will have acces to detailed notes for each session, hundreds of commonly asked questions & answers and additional resources for extra learning.',
+         ],
+      },
+   ]
 
    return (
-      <div 
-         id="reviews"
-         className="scroll-offset flex flex-col lg:flex-row items-start justify-between bg-green-950 px-2 md:px-6 py-10 lg:py-20 lg:px- gap-10 transition-all duration-500"
-      >
-         {/* Left Side */}
-         <div className="lg:w-1/3">
-            <p className='font-serif flex items-center gap-4 font-semibold text-white mb-6 text-xl md:text-3xl'>
-               {/* <div className="text-green-700 text-2xl"><FaLeaf /></div>  */}
-               TESTIMONIALS
-               <div className="text-green-700 text-2xl"><FaLeaf /></div>
-            </p>
-            <p className="text-xl md:text-3xl font-bold text-white">Reviews of our customers</p>
-            <p className='mt-8 text-white italic'> 4.5 Based On 500+ Review</p>
-            <div className="flex space-x-1">
-               {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-green-500 text-xl italic">★</span>
-               ))}
+      <div>
+         <style>
+         {`
+            @keyframes dance {
+               0%, 100% {
+               transform: translateY(0) rotate(0deg) scale(1);
+               }
+               25% {
+               transform: translateY(-4px) rotate(-2deg) scale(1.05);
+               }
+               50% {
+               transform: translateY(2px) rotate(2deg) scale(1.03);
+               }
+               75% {
+               transform: translateY(-2px) rotate(-1deg) scale(1.04);
+               }
+            }
+            .egg-shape {
+               border-radius: 60% 60% 70% 70% / 60% 60% 40% 40%;
+            }
+            .animate-dance {
+               animation: dance 4.5s ease-in-out infinite;
+            }
+         `}
+         </style>
+
+         <h1 className="text-center text-2xl md:text-3xl font-bold text-[#000000c9] mb-7">
+         What’s Included?
+         </h1>
+
+         <div className="flex flex-col gap-6">
+         {items.map((item, index) => (
+            <div key={index} className="bg-white rounded-xl p-4 shadow flex flex-col md:flex-row justify-center gap-4 md:gap-6">
+               {/* Image Circle */}
+               {/* Egg-shaped image container */}
+               <div className="relative min-w-[130px] h-[130px] bg-[#d6f2df] flex items-center justify-center m-auto egg-shape overflow-hidden shadow-md">
+                  <img
+                     src={item.img}
+                     alt={item.title}
+                     className="w-12/13 h-12/13 object-contain animate-dance"
+                  />
+               </div>
+
+               {/* Texts */}
+               <div className="flex-1 space-y-1 text-center md:text-start">
+                  <p className="text-base md:text-xl font-semibold text-[#000000c9]">
+                     {item.title}
+                  </p>
+                  {item.points.map((text, i) => (
+                     <p key={i} className="text-sm text-gray-700">{text}</p>
+                  ))}
+               </div>
             </div>
+         ))}
          </div>
-
-         {/* Right Side */}
-         <div className="lg:w-2/3 w-full relative">
-            {/* Fixed arrows outside the slider content */}
-            <button
-               onClick={() => sliderRef.current.slickPrev()}
-               className="absolute top-44 sm:top-30 lg:top-40 right-16 z-10 w-8 h-8 border border-green-600 text-green-600 rounded flex items-center justify-center hover:bg-green-100"
-            >
-               &#10094;
-            </button>
-            <button
-               onClick={() => sliderRef.current.slickNext()}
-               className="absolute top-44 sm:top-30 lg:top-40 right-4 z-10 w-8 h-8 border border-green-600 text-green-600 rounded flex items-center justify-center hover:bg-green-100"
-            >
-               &#10095;
-            </button>
-
-            {/* Slider */}
-            <Slider ref={sliderRef} {...settings}>
-               {testimonials.map((item, idx) => (
-                  <div key={idx} className="bg-transparent lg:pl-7">
-                     <div className="flex space-x-1 mb-3">
-                        {[...Array(5)].map((_, i) => (
-                           <span key={i} className="text-green-400 italic text-lg">★</span>
-                        ))}
-                     </div>
-                     <p className="italic text-white mb-4">"{item.text}"</p>
-                     <hr className="border-t outline-none border-green-50 mb-4" />
-                     <div className="flex items-center space-x-4">
-                        <img src={item.img} alt={item.name} className="w-14 h-14 rounded-full object-cover" />
-                        <p className="font-semibold text-white">{item.name}</p>
-                     </div>
-                  </div>
-               ))}
-            </Slider>
-         </div>
+         <hr className='my-10 border-t outline-0 border-gray-400'/>
       </div>
-   );
-};
+   )
+}
 
-export default Section4;
+export default Section4

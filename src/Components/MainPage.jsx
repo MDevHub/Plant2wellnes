@@ -50,7 +50,7 @@ FaCheckCircle,
                <section ref={section3Ref} className="">
                   <Section3 />
                </section>
-               <section className="p-6 bg-white rounded shadow">
+               <section className="">
                   <Section4 />
                </section>
             </div>
@@ -60,56 +60,56 @@ FaCheckCircle,
             {/* Reserve space to prevent jump */}
             <div style={{ height: isFixed && sidebarRef.current ? `${sidebarRef.current.offsetHeight}px` : 'auto' }}>
                <div
-               ref={sidebarRef}
-               className={`bg-white text-black rounded-xl shadow-lg p-6 space-y-4 z-50 transition-all duration-300 ${
-                  isFixed ? 'fixed top-[7rem] w-[300px]' : 'relative w-full'
-               }`}
-               style={{ width: isFixed ? '300px' : 'auto' }}
-               >
-               <h2 className="text-[#3e7752] text-xl font-semibold">
-                  Ultimate Blood & Sugar Challenge
-               </h2>
-               <hr className="border-t" />
+                     ref={sidebarRef}
+                     className={`bg-white text-black rounded-xl shadow-lg p-6 space-y-4 z-50 transition-all duration-300 ${
+                        isFixed ? 'fixed top-[7rem] w-[300px]' : 'relative w-full'
+                  }`}
+                  style={{ width: isFixed ? '320px' : 'auto' }}
+                  >
+                  <h2 className="text-[#3e7752] text-xl font-bold">
+                     Ultimate Blood & Sugar Challenge
+                  </h2>
+                  <hr className="border-t outline-0 border-gray-400" />
 
-               {/* Info */}
-               <div className="space-y-2 text-sm">
-                  <p className="flex items-center gap-2">
-                     <FaCalendarAlt className="text-[#3e7752]" /> 10th July - 31st July 2025
-                  </p>
-                  <p className="flex items-center gap-2">
-                     <FaClock className="text-[#3e7752]" /> Multiple time slots available
-                  </p>
-                  <p className="flex items-center gap-2">
-                     <FaVideo className="text-[#3e7752]" /> Recording available: 24 hours
-                  </p>
-                  <p className="flex items-center gap-2">
-                     <FaMoneyBillWave className="text-[#3e7752]" /> Contribution: As said by the host
-                  </p>
-               </div>
+                  {/* Info */}
+                  <div className="space-y-2 text-sm">
+                     <p className="flex items-center gap-2">
+                        <FaCalendarAlt className="text-[#3e7752]" /> 10th July - 31st July 2025
+                     </p>
+                     <p className="flex items-center gap-2">
+                        <FaClock className="text-[#3e7752]" /> Multiple time slots available
+                     </p>
+                     <p className="flex items-center gap-2">
+                        <FaVideo className="text-[#3e7752]" /> Recording available: 24 hours
+                     </p>
+                     <p className="flex items-center gap-2">
+                        <FaMoneyBillWave className="text-[#3e7752]" /> Contribution: As said by the host
+                     </p>
+                  </div>
 
-               {/* CTA */}
-               <button className="relative overflow-hidden bg-[#3e7752] text-white px-6 py-2 rounded-full mt-2">
-                  <span className="absolute inset-0 bg-white/10 blur-sm animate-pulse"></span>
-                  <span className="relative z-10">Register Now</span>
-               </button>
+                  {/* CTA */}
+                  <button className="relative overflow-hidden bg-[#3e7752] text-white w-full py-2 rounded-full mt-2">
+                     <span className="absolute inset-0 bg-white/10 blur-sm animate-pulse"></span>
+                     <span className="relative z-10">Register Now</span>
+                  </button>
 
-               {/* Benefits */}
-               <div className="space-y-2 mt-4">
-                  <p className="flex items-center gap-2">
-                     <FaCheckCircle className="text-[#3e7752]" /> Fully Energized and Focussed
-                  </p>
-                  <p className="flex items-center gap-2">
-                     <FaCheckCircle className="text-[#3e7752]" /> Clear-minded with optimal weight
-                  </p>
-                  <p className="flex items-center gap-2">
-                     <FaCheckCircle className="text-[#3e7752]" /> Full guide on diet and Hopeful.
-                  </p>
-               </div>
+                  {/* Benefits */}
+                  <div className="space-y-2 mt-4">
+                     <p className="flex items-center gap-2">
+                        <FaCheckCircle className="text-[#3e7752]" /> Fully Energized and Focussed
+                     </p>
+                     <p className="flex items-center gap-2">
+                        <FaCheckCircle className="text-[#3e7752]" /> Clear-minded with optimal weight
+                     </p>
+                     <p className="flex items-center gap-2">
+                        <FaCheckCircle className="text-[#3e7752]" /> Full guide on diet and Hopeful.
+                     </p>
+                  </div>
 
-               {/* Highlight */}
-               <div className="bg-[#4f8a63] text-white text-center text-sm py-2 px-4 rounded-md mt-4">
-                  1,000+ people already joined
-               </div>
+                  {/* Highlight */}
+                  <div className="bg-[#4f8a63] text-white text-center text-sm py-2 px-4 rounded-full mt-4">
+                     1,000+ people already joined
+                  </div>
                </div>
             </div>
          </aside>
