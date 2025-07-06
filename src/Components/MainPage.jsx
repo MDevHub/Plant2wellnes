@@ -16,6 +16,7 @@ import Section7 from './HomePage/Section7';
 import Section8 from './HomePage/Section8';
 import Section9 from './HomePage/Section9';
 import Section10 from './HomePage/Section10';
+import Section11 from './HomePage/Section11';
 
    const NAVBAR_HEIGHT = 112; // 7rem
 
@@ -74,8 +75,11 @@ import Section10 from './HomePage/Section10';
                <section>
                   <Section9 />
                </section>
-                <section>
+               <section>
                   <Section10 />
+               </section>
+               <section>
+                  <Section11 />
                </section>
             </div>
 
@@ -112,7 +116,7 @@ import Section10 from './HomePage/Section10';
                      </div>
 
                      {/* CTA */}
-                     <button className="relative overflow-hidden bg-[#3e7752] text-white w-full py-2 rounded-full mt-2">
+                     <button className=" relative overflow-hidden bg-[#3e7752] text-white w-full py-2 rounded-full mt-2">
                         <span className="absolute inset-0 bg-white/10 blur-sm animate-pulse"></span>
                         <span className="relative z-10">Register Now</span>
                      </button>
