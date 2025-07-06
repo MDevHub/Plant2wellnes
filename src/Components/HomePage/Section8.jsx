@@ -1,87 +1,78 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
-
-const faqs = [
-   {
-      question: "Who is this challenge for?",
-      answer:
-         "This challenge is for you if you have high blood sugar, pre diabetes, diabetes, high blood pressure, high cholesterol or you are predisposed to anyone of the health conditions mentioned above, and you simply want to prevent these before the onset.",
-   },
-   {
-      question: "Who shouldn't join this challenge?",
-      answer:
-         "Don’t bother to join if you’re not ready to be free from these health conditions or you are okay with just managing your health with continues use of drugs.",
-   },
-   {
-      question: "What if I don't have access to recommended herbs?",
-      answer:
-         "All the herbs, spices, vegetables and fruits we are recommending can be sourced locally around you, if you’re not in Nigeria we will give you substitutes. You can also get your herbs supplies from our farm at a special discount.",
-   },
-   {
-      question: "What support is available during the challenge?",
-      answer:
-         "You will have access to dedicated WhatsApp group for support where you can get a direct communication with me.",
-   },
-];
+import React from 'react'
+import { FaHeartbeat, FaPills, FaShieldAlt, FaCheckCircle } from 'react-icons/fa'
+import { RiLeafLine } from 'react-icons/ri'
+import { BiRefresh } from 'react-icons/bi'
+import { MdOutlineSelfImprovement } from 'react-icons/md'
 
 const Section8 = () => {
-   const [openIndex, setOpenIndex] = useState(null);
-   const contentRefs = useRef([]);
+   return (
+      <div className="bg-white rounded-xl shadow py-15 px-6">
+         {/* Inline keyframes for bounce */}
+         <style>
+            {`
+               @keyframes bounceIcon {
+                  0%, 100% { transform: translateY(0); }
+                  50% { transform: translateY(-8px); }
+               }
+               .icon-bounce {
+                  animation: bounceIcon 2s ease-in-out infinite;
+               }
+            `}
+         </style>
 
-   const toggle = (index) => {
-         setOpenIndex(openIndex === index ? null : index);
-   };
+         <div className="space-y-15 text-center md:text-left">
+            <h1 className="text-[16px] sm:text-2xl md:text-3xl font-semibold text-[#3e7752] flex items-center gap-2">
+               This Course Is for You If You’re
+					<FaCheckCircle className="text-[#3e7752] md:text-3xl" />
+            </h1>
 
-return (
-   <div
-      id="faqs"
-      className="scroll-offset w-full bg-green-50 py-12 px-4 md:px-10 lg:px-20">
-      <h2 className="text-2xl md:text-3xl font-bold text-green-900 text-center mb-10">
-         Frequently Asked Questions
-      </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+               <div className="div">
+                  <FaHeartbeat className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
+                     Living with high blood pressure or high blood sugar and tired of managing symptoms with medication
+                  </p>
+               </div>
+               <div className="div">
+                  <FaPills className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
+                     Experiencing the frustrating side effects of drugs fatigue, dizziness, low libido, or more
+                  </p>
+               </div>
+            </div>
 
-            <div className="max-w-4xl mx-auto space-y-4">
-               {faqs.map((faq, index) => {
-                  const isOpen = openIndex === index;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+               <div className="div">
+                  <RiLeafLine className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
+                     Seeking a safe, natural approach that gets to the root cause, not just the symptoms
+                  </p>
+               </div>
+               <div className="div">
+                  <FaShieldAlt className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
+                     Determined to prevent chronic illness before it takes control of your life
+                  </p>
+               </div>
+            </div>
 
-               return (
-                  <div
-                     key={index}
-                     className="bg-white rounded-md shadow-md border border-green-100 transition-all duration-300"
-                  >
-                     {/* Header */}
-                     <button
-                        onClick={() => toggle(index)}
-                        className="w-full flex items-center justify-between py-5 px-2 text-left text-green-800 font-medium text-lg hover:bg-green-100 transition-colors duration-300"
-                     >
-                        <span>{faq.question}</span>
-                        {isOpen ? (
-                           <FaChevronUp className="text-green-700 transition-transform duration-300" />
-                        ) : (
-                           <FaChevronDown className="text-green-700 transition-transform duration-300" />
-                        )}
-                     </button>
-
-                     {/* Animated Answer Section */}
-                     <div
-                        ref={(el) => (contentRefs.current[index] = el)}
-                        style={{
-                        maxHeight: isOpen
-                           ? `${contentRefs.current[index]?.scrollHeight}px`
-                           : '0px',
-                        }}
-                        className="overflow-hidden transition-all duration-500 ease-in-out px-5 text-green-900 text-[16px]"
-                     >
-                        <div className={`py-4 ${isOpen ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
-                           {faq.answer}
-                        </div>
-                     </div>
-                  </div>
-               );
-            })}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+               <div className="div">
+                  <BiRefresh className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
+                     Someone who has tried other natural methods but didn’t get results
+                  </p>
+               </div>
+               <div className="div">
+                  <MdOutlineSelfImprovement className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
+                     Ready to take back control of your health using food, herbs, and lifestyle strategies that works
+                  </p>
+               </div>
+            </div>
          </div>
       </div>
-   );
-};
+   )
+}
 
-export default Section8;
+export default Section8

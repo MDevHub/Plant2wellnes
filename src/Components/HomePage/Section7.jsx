@@ -40,7 +40,7 @@
 
                {/* Other Reviews */}
                <div className="lg:col-span-2 flex flex-col gap-6">
-                  {[{ img: man2, name: 'Muinat Adeyemi', age: '22, Ogun State', reviewImg: review1 },
+                  {[{ img: man2, name: 'Kasali Adeyemi', age: '22, Ogun State', reviewImg: review1 },
                      { img: man1, name: 'Aisha Bello', age: '29, Abuja', reviewImg: review2 },
                      { img: man3, name: 'John Okafor', age: '35, Enugu', reviewImg: review3 }
                   ].map((item, i) => (
