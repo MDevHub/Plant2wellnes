@@ -28,13 +28,13 @@ const Section8 = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                <div className="div">
-                  <FaHeartbeat className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <FaHeartbeat className="text-[#3e7752] mx-auto md:mx-0 text-4xl md:text-6xl icon-bounce" />
                   <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
                      Living with high blood pressure or high blood sugar and tired of managing symptoms with medication
                   </p>
                </div>
                <div className="div">
-                  <FaPills className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <FaPills className="text-[#3e7752] mx-auto md:mx-0 text-4xl md:text-6xl icon-bounce" />
                   <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
                      Experiencing the frustrating side effects of drugs fatigue, dizziness, low libido, or more
                   </p>
@@ -43,13 +43,13 @@ const Section8 = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                <div className="div">
-                  <RiLeafLine className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <RiLeafLine className="text-[#3e7752] mx-auto md:mx-0 text-4xl md:text-6xl icon-bounce" />
                   <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
                      Seeking a safe, natural approach that gets to the root cause, not just the symptoms
                   </p>
                </div>
                <div className="div">
-                  <FaShieldAlt className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <FaShieldAlt className="text-[#3e7752] mx-auto md:mx-0 text-4xl md:text-6xl icon-bounce" />
                   <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
                      Determined to prevent chronic illness before it takes control of your life
                   </p>
@@ -58,13 +58,13 @@ const Section8 = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                <div className="div">
-                  <BiRefresh className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <BiRefresh className="text-[#3e7752] mx-auto md:mx-0 text-4xl md:text-6xl icon-bounce" />
                   <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
                      Someone who has tried other natural methods but didn’t get results
                   </p>
                </div>
                <div className="div">
-                  <MdOutlineSelfImprovement className="text-[#3e7752] mx-auto text-4xl md:text-6xl icon-bounce" />
+                  <MdOutlineSelfImprovement className="text-[#3e7752] mx-auto md:mx-0 text-4xl md:text-6xl icon-bounce" />
                   <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">
                      Ready to take back control of your health using food, herbs, and lifestyle strategies that works
                   </p>

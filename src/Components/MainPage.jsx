@@ -15,6 +15,7 @@ import Section6 from './HomePage/Section6';
 import Section7 from './HomePage/Section7';
 import Section8 from './HomePage/Section8';
 import Section9 from './HomePage/Section9';
+import Section10 from './HomePage/Section10';
 
    const NAVBAR_HEIGHT = 112; // 7rem
 
@@ -72,6 +73,9 @@ import Section9 from './HomePage/Section9';
                </section>
                <section>
                   <Section9 />
+               </section>
+                <section>
+                  <Section10 />
                </section>
             </div>
 

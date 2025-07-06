@@ -25,8 +25,8 @@
 		},
 		{
 			icon: <FaHandHoldingHeart className="text-3xl md:text-5xl text-[#3e7752] mr-6 md:mr-0 transition-transform duration-300 hover:scale-110" />,
-			front: ['Contribution', '₦990 – ₦2,990'],
-			back: ['Select the amount you would like to contribute for this workshop.'],
+			front: ['Timings', 'Flexible time'],
+			back: ['Sessions are always recorded and available at your flexible time.'],
 		},
 	];
 
