@@ -20,7 +20,8 @@
 
 	const Section1 = () => {
 		return (
-			<div className="relative mt-0 bg-green-50 py-16 px-3 md:px-10 xl:px-40 rounded-b-[80px] md:rounded-none pb-40">
+			<div id='home' 
+				className="relative mt-0 bg-green-50 py-16 px-3 md:px-10 xl:px-40 rounded-b-[80px] md:rounded-none pb-40">
 			<motion.div
 				className="max-w-3xl mx-auto text-center space-y-5"
 				initial="hidden"
@@ -78,12 +79,19 @@
 				</motion.p>
 
 				<motion.div variants={fadeUp}>
-					<Link to="#Register">
-					<button className="mt-2 bg-[#3e7752] text-white font-semibold px-20 py-3 cursor-pointer rounded-full hover:bg-[#28613c] transition-all duration-300">
-						Register Now
-					</button>
+					<Link to="#" smooth={true} offset={-100} duration={600}>
+						<div className="relative group inline-block rounded-full overflow-hidden">
+							{/* Glow Layer */}
+							<div className="absolute inset-0 bg-gradient-to-r from-[#4e9e6d] via-[#3e7752] to-[#4e9e6d] opacity-50 blur-lg animate-glow"></div>
+
+							{/* Actual Button */}
+							<button className="relative z-10 mt-2 bg-gradient-to-r from-[#3e7752] to-[#4e9e6d] text-white font-semibold px-20 py-3 cursor-pointer rounded-full hover:bg-[#28613c] transition-all duration-300">
+							Register Now
+							</button>
+						</div>
 					</Link>
 				</motion.div>
+
 			</motion.div>
 			</div>
 		);

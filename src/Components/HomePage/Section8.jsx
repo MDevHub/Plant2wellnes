@@ -6,7 +6,8 @@ import { MdOutlineSelfImprovement } from 'react-icons/md'
 
 const Section8 = () => {
    return (
-      <div className="bg-white rounded-xl shadow py-15 px-6">
+      <div 
+         className="bg-white rounded-xl shadow py-15 px-6">
          {/* Inline keyframes for bounce */}
          <style>
             {`
@@ -20,13 +21,13 @@ const Section8 = () => {
             `}
          </style>
 
-         <div className="space-y-15 text-center md:text-left">
-            <h1 className="text-[16px] sm:text-2xl md:text-3xl font-semibold text-[#3e7752] flex items-center gap-2">
+         <div className="space-y-8 text-center md:text-left">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-[#3e7752] flex justify-center md:justify-start items-center mb-8 gap-2">
                This Course Is for You If You’re
 					<FaCheckCircle className="text-[#3e7752] md:text-3xl" />
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                <div className="div">
                   <FaHeartbeat className="text-[#3e7752] mx-auto md:mx-0 text-4xl md:text-6xl icon-bounce" />
                   <p className="text-base sm:text-lg md:text-xl text-[#000000c9] mt-2">

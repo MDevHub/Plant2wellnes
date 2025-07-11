@@ -9,7 +9,8 @@
 
    const Section7 = () => {
    return (
-      <div className="bg-white rounded-xl p-5">
+      <div id='reviews' 
+         className="bg-white rounded-xl p-5">
          {/* Title */}
          <div className="py-10 space-y-3">
             <h1 className="text-2xl md:text-3xl text-[#3e7752] font-semibold text-center">

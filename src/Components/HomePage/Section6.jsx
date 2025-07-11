@@ -35,7 +35,8 @@
 
       const Section6 = () => {
       return (
-         <div className="bg-white rounded-xl shadow px-3 md:px-6 py-8 space-y-6">
+         <div id='about' 
+            className="bg-white rounded-xl shadow px-3 md:px-6 py-8 space-y-6">
             <h1 className="text-xl sm:text-3xl md:text-4xl font-semibold text-center text-[#3e7752] mb-10">
                What are the 7 Habits I will learn?
             </h1>

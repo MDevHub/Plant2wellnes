@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-}
-.scroll-offset {
-  scroll-margin-top: 5rem; /* Adjust to your fixed navbar height */
-}
 html, body {
   margin: 0;
   padding: 0;
@@ -16,7 +10,6 @@ html, body {
 .egg-mask {
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }
-
 
 .shimmer-text {
   position: relative;
@@ -49,6 +42,18 @@ html, body {
   100% {
     left: 100%;
   }
+}
+
+@keyframes glow {
+  0%, 100% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+}
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
 }
 
 

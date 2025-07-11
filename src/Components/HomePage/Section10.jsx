@@ -8,17 +8,17 @@ const faqs = [
          "Online, fully guided on WhatsApp.",
    },
    {
-      question: "Who shouldn't join this challenge?",
+      question: " What if I’m not available during classes?",
       answer:
          "You’ll get recordings and flexible daily tasks.",
    },
    {
-      question: "What if I don't have access to recommended herbs?",
+      question: "What if I can’t find some herbs?",
       answer:
          "You’ll get alternatives locally accessible ingredients.",
    },
    {
-      question: "What support is available during the challenge?",
+      question: "Are you giving us herbs?",
       answer:
          "No, but you’ll get a 30% discount on any product you choose to buy.",
    },

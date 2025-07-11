@@ -13,7 +13,8 @@ const Section9 = () => {
    ]
 
    return (
-      <div className="bg-white rounded-xl shadow py-12 px-6 space-y-6">
+      <div id='training' 
+         className="bg-white rounded-xl shadow py-12 px-6 space-y-6">
          <h1 className="text-xl md:text-3xl font-semibold text-[#3e7752]">
             Why This Challenge is Different?
          </h1>
